@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Global Sport Link | AI-powered performance insight</title>
+  <meta name="description" content="Global Sport Link analyzes sports performance at every level — from elite professionals to everyday athletes." />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- ================= CSS (INLINE) ================= -->
+  <style>
+    :root{
+      --bg:#0b1220;
+      --text:#e5e7eb;
+      --muted:#9aa4bf;
+      --brand:#2563eb;
+      --card:#0f172a;
+      --line:rgba(255,255,255,.12);
+      --max:1100px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    .container{
+      max-width:var(--max);
+      margin:auto;
+      padding:0 20px;
+    }
+
+    /* HEADER */
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:var(--bg);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+    }
+
+    .brand img{
+      height:42px;
+      width:auto;
+    }
+
+    .navlinks{
+      display:flex;
+      gap:18px;
+    }
+
+    .navlinks a{
+      color:var(--muted);
+      font-weight:500;
+    }
+
+    .navlinks a:hover{color:#fff}
+
+    /* HERO */
+    .hero{
+      padding:70px 0 40px;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:clamp(2rem,4vw,3rem);
+      margin-bottom:12px;
+    }
+
+    .hero p{
+      color:var(--muted);
+      max-width:700px;
+      margin:0 auto 26px;
+    }
+
+    .hero-actions{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:12px 20px;
+      border-radius:10px;
+      font-weight:600;
+      border:1px solid var(--line);
+      background:transparent;
+      color:#fff;
+    }
+
+    .btn.primary{
+      background:var(--brand);
+      border-color:var(--brand);
+    }
+
+    .btn:hover{opacity:.9}
+
+    /* SECTIONS */
+    section{
+      padding:50px 0;
+    }
+
+    h2{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:var(--card);
+      padding:24px;
+      border-radius:14px;
+      border:1px solid var(--line);
+    }
+
+    .card h3{
+      margin-top:0;
+      color:#fff;
+    }
+
+    .card p{
+      color:var(--muted);
+    }
+
+    .sports-list{
+      display:flex;
+      justify-content:center;
+      gap:22px;
+      flex-wrap:wrap;
+      padding:0;
+      list-style:none;
+      color:var(--muted);
+      font-weight:500;
+    }
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--line);
+      padding:30px 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .navlinks{display:none}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="container nav">
+    <a href="#top" class="brand">
+      <img src="assets/img/logo.svg" alt="Global Sport Link logo">
+    </a>
+
+    <nav class="navlinks">
+      <a href="#elite">Elite Analysis</a>
+      <a href="#personal">Submit Video</a>
+      <a href="#sports">Sports</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero container">
+    <h1>AI-powered performance insight across sport</h1>
+    <p>
+      Global Sport Link analyzes sports performance at every level —
+      from elite professionals to everyday athletes.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#elite" class="btn primary">Explore Elite Analysis</a>
+      <a href="#personal" class="btn">Submit Your Video</a>
+    </div>
+  </section>
+
+  <!-- TWO PILLARS -->
+  <section class="container">
+    <h2>Two Ways to Learn</h2>
+
+    <div class="grid">
+      <div class="card" id="elite">
+        <h3>Elite Performance Insight</h3>
+        <p>
+          We analyze professional athletes to highlight key performance
+          patterns that amateurs should observe, understand, and apply.
+        </p>
+      </div>
+
+      <div class="card" id="personal">
+        <h3>Personal Performance Analysis</h3>
+        <p>
+          Upload a short training clip and receive clear,
+          educational AI-generated feedback tailored to your movement.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPORTS -->
+  <section class="container" id="sports">
+    <h2>Sports Covered</h2>
+    <ul class="sports-list">
+      <li>Golf</li>
+      <li>Football (Soccer)</li>
+      <li>Basketball</li>
+      <li>Tennis</li>
+      <li>Athletics</li>
+    </ul>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="container" id="about">
+    <h2>About Global Sport Link</h2>
+    <div class="card">
+      <p>
+        Global Sport Link is a multi-sport performance analysis platform.
+        We use artificial intelligence to turn short sports videos into
+        clear, educational insight.
+      </p>
+      <p>
+        Our mission is simple: help athletes understand movement better —
+        by learning from elite performance and applying it personally.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© <span id="year"></span> Global Sport Link</p>
+  <p>
+    Educational performance analysis only.
+    Uploads must be authorized by the uploader.
+  </p>
+</footer>
+
+<!-- ================= JS (INLINE) ================= -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+📁 MINIMUM FILES YOU NEED
+text
+Copy code
+index.html
+assets/
+ └─ img/
+    ├─ logo.svg
+    └─ favicon.svg
+That’s it.
+No build step. No framework. No config.
+
+🚀 NEXT (OPTIONAL, VERY EASY)
+I can now:
+1️⃣ Add Netlify video upload form into this same page
+2️⃣ Add SEO + social sharing (Open Graph)
+3️⃣ Add smooth animations (very subtle)
+4️⃣ Prepare YouTube watermark version of the logo
+
+Just tell me 👍
+
+
+
+
+
+
+
+You said:
+1,2,3,4
+
+
+ChatGPT said:
+Absolutely — here is the updated single-file index.html with all 4 upgrades:
+
+✅ 1) Netlify video upload form (with file upload)
+✅ 2) SEO + Social sharing (Open Graph + Twitter cards)
+✅ 3) Subtle animations + smooth scrolling (with reduced-motion support)
+✅ 4) Watermark logo file (SVG) + quick usage tips
+
+You’ll still keep only one HTML file, plus your /assets/img/ images.
+
+1) ✅ Updated index.html (ALL-IN-ONE + Netlify form + SEO + Animations)
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Global Sport Link (GSL) | AI-powered performance insight</title>
+  <meta name="description" content="Global Sport Link (GSL) analyzes sports performance at every level — from elite professionals to everyday athletes. Learn from pros and submit your own video for educational insight." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://globalsportlink.com/" />
+
+  <!-- FAVICON -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- OPEN GRAPH (SOCIAL SHARING) -->
+  <meta property="og:site_name" content="Global Sport Link (GSL)" />
+  <meta property="og:title" content="Global Sport Link (GSL) | AI-powered performance insight" />
+  <meta property="og:description" content="Elite performance breakdowns + personal video analysis. Educational insight across sport." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://globalsportlink.com/" />
+  <!-- Create/Upload this image when ready (recommended 1200x630 PNG). For now, you can point to an SVG: -->
+  <meta property="og:image" content="https://globalsportlink.com/assets/img/logo-social.svg" />
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Global Sport Link (GSL)" />
+  <meta name="twitter:description" content="AI-powered performance insight across sport. Learn from pros. Submit your video." />
+  <meta name="twitter:image" content="https://globalsportlink.com/assets/img/logo-social.svg" />
+
+  <!-- ================= CSS (INLINE) ================= -->
+  <style>
+    :root{
+      --bg:#0b1220;
+      --text:#e5e7eb;
+      --muted:#9aa4bf;
+      --brand:#2563eb;
+      --card:#0f172a;
+      --line:rgba(255,255,255,.12);
+      --max:1100px;
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background:
+        radial-gradient(900px 520px at 15% 10%, rgba(37,99,235,.18), transparent 55%),
+        radial-gradient(900px 520px at 85% 15%, rgba(37,99,235,.10), transparent 60%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:auto;padding:0 20px}
+
+    /* HEADER */
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(11,18,32,.86);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{height:42px;width:auto;display:block}
+
+    .navlinks{
+      display:flex;
+      gap:18px;
+      align-items:center;
+    }
+    .navlinks a{
+      color:var(--muted);
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:10px;
+    }
+    .navlinks a:hover{color:#fff;background:rgba(255,255,255,.05)}
+
+    .menuBtn{
+      display:none;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:12px;
+      font-weight:700;
+    }
+    .mobilePanel{
+      display:none;
+      padding:10px 0 16px;
+      border-top:1px solid var(--line);
+    }
+    .mobilePanel a{
+      display:block;
+      padding:10px 12px;
+      border-radius:12px;
+      color:var(--muted);
+      font-weight:600;
+    }
+    .mobilePanel a:hover{background:rgba(255,255,255,.05);color:#fff}
+    .mobilePanel.open{display:block}
+
+    /* HERO */
+    .hero{
+      padding:74px 0 42px;
+      text-align:center;
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--muted);
+      font-weight:600;
+      font-size:.92rem;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background:var(--brand);
+      box-shadow:0 0 0 6px rgba(37,99,235,.15);
+    }
+    .hero h1{
+      font-size:clamp(2rem,4vw,3.1rem);
+      margin:14px 0 10px;
+      letter-spacing:-.6px;
+      line-height:1.15;
+    }
+    .hero p{
+      color:var(--muted);
+      max-width:780px;
+      margin:0 auto 26px;
+      font-size:1.06rem;
+    }
+    .hero-actions{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:800;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:#fff;
+      transition: transform .18s ease, opacity .18s ease, background .18s ease;
+    }
+    .btn.primary{
+      background:var(--brand);
+      border-color:var(--brand);
+    }
+    .btn:hover{opacity:.95;transform:translateY(-1px)}
+    .btn:active{transform:translateY(0px)}
+
+    /* SECTIONS */
+    section{padding:54px 0}
+    h2{text-align:center;margin:0 0 28px;letter-spacing:-.3px}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px;
+    }
+    .card{
+      background:rgba(15,23,42,.92);
+      padding:22px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+    .card h3{margin:0 0 8px;color:#fff;letter-spacing:-.2px}
+    .card p{margin:0;color:var(--muted)}
+    .small{color:var(--muted);font-size:.92rem}
+
+    .sports-list{
+      display:flex;
+      justify-content:center;
+      gap:18px;
+      flex-wrap:wrap;
+      padding:0;
+      margin:0;
+      list-style:none;
+      color:var(--muted);
+      font-weight:700;
+    }
+    .pill{
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(255,255,255,.03);
+    }
+
+    /* FORM */
+    form{display:grid;gap:12px}
+    label{font-weight:700;color:var(--muted);font-size:.95rem}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:120px;resize:vertical}
+    input:focus, select:focus, textarea:focus{border-color:rgba(37,99,235,.7)}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .check{
+      display:flex;gap:10px;align-items:flex-start;
+      padding:12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+    }
+    .check input{width:auto;margin-top:3px}
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid var(--line);
+      padding:30px 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* SUBTLE ANIMATIONS */
+    .reveal{
+      opacity:0;
+      transform: translateY(10px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.show{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+    @media(max-width:900px){
+      .navlinks{display:none}
+      .menuBtn{display:inline-flex}
+      .row{grid-template-columns:1fr}
+    }
+
+    /* Reduced motion accessibility */
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      .btn{transition:none}
+      .reveal{transition:none;opacity:1;transform:none}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="container">
+    <div class="nav">
+      <a href="#top" class="brand" aria-label="Global Sport Link home">
+        <img src="assets/img/logo.svg" alt="Global Sport Link (GSL) logo">
+      </a>
+
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#elite">Elite Analysis</a>
+        <a href="#personal">Submit Video</a>
+        <a href="#sports">Sports</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="menuBtn" data-menu-btn aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+    </div>
+
+    <div id="mobilePanel" class="mobilePanel" data-mobile-panel>
+      <a href="#elite">Elite Analysis</a>
+      <a href="#personal">Submit Video</a>
+      <a href="#sports">Sports</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero container reveal">
+    <span class="badge"><span class="dot"></span>Multi-sport • Educational • AI-assisted</span>
+    <h1>AI-powered performance insight across sport</h1>
+    <p>
+      Global Sport Link (GSL) analyzes sports performance at every level — from elite professionals to everyday athletes.
+      Learn from professional patterns and submit your own video for clear, educational insight.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#elite" class="btn primary">Explore Elite Analysis</a>
+      <a href="#personal" class="btn">Submit Your Video</a>
+    </div>
+  </section>
+
+  <!-- ELITE -->
+  <section class="container reveal" id="elite">
+    <h2>Elite Performance Insight</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Professional breakdowns</h3>
+        <p>We analyze professional athletes to highlight key performance patterns amateurs should observe and understand.</p>
+      </div>
+      <div class="card">
+        <h3>What to look for</h3>
+        <p>Timing, sequencing, balance, stability, and efficiency — explained clearly, without jargon.</p>
+      </div>
+      <div class="card">
+        <h3>Educational commentary</h3>
+        <p>Transformative analysis designed to help athletes learn performance principles and apply them safely in practice.</p>
+      </div>
+    </div>
+    <p class="small" style="text-align:center;margin-top:14px">
+      Note: Elite analysis content is educational and does not imply affiliation with or endorsement by athletes, leagues, broadcasters, or rights holders.
+    </p>
+  </section>
+
+  <!-- PERSONAL + NETLIFY FORM -->
+  <section class="container reveal" id="personal">
+    <h2>Submit Your Video</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Guidelines</h3>
+        <p class="small" style="margin-top:10px">
+          Best results come from a short clip with a stable camera and a clear view of the athlete.
+        </p>
+        <ul class="small" style="margin:12px 0 0 0; padding-left:18px">
+          <li>Clip length: <strong>5–10 seconds</strong></li>
+          <li>One athlete per clip</li>
+          <li>Training/practice footage preferred</li>
+          <li>Good lighting, minimal camera shake</li>
+          <li>Optional: tell us the skill you want to improve</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Upload form (Netlify)</h3>
+
+        <!-- NETLIFY FORM: file upload enabled -->
+        <form name="video-submission" method="POST" data-netlify="true" enctype="multipart/form-data">
+          <input type="hidden" name="form-name" value="video-submission" />
+
+          <div class="row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="sport">Sport</label>
+              <select id="sport" name="sport" required>
+                <option value="">Select…</option>
+                <option>Golf</option>
+                <option>Football (Soccer)</option>
+                <option>Basketball</option>
+                <option>Tennis</option>
+                <option>Athletics</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="focus">Focus area (optional)</label>
+              <input id="focus" name="focus" type="text" placeholder="e.g., tempo, balance, shot form" />
+            </div>
+          </div>
+
+          <div>
+            <label for="video">Upload video</label>
+            <input id="video" name="video" type="file" accept="video/*" required />
+            <div class="small" style="margin-top:6px">Tip: 5–10 seconds is ideal.</div>
+          </div>
+
+          <div>
+            <label for="notes">Notes (optional)</label>
+            <textarea id="notes" name="notes" placeholder="What are you trying to improve? Anything we should focus on?"></textarea>
+          </div>
+
+          <div class="check">
+            <input id="consent" name="consent" type="checkbox" required />
+            <label for="consent">
+              I confirm I have the right and permission to upload this video for educational performance analysis.
+              For minors, I confirm I am a parent, guardian, or authorized coach.
+            </label>
+          </div>
+
+          <button class="btn primary" type="submit">Submit</button>
+          <div class="small">Educational performance analysis only. Not medical advice. Not a replacement for professional coaching.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPORTS -->
+  <section class="container reveal" id="sports">
+    <h2>Sports Covered</h2>
+    <ul class="sports-list">
+      <li class="pill">Golf</li>
+      <li class="pill">Football (Soccer)</li>
+      <li class="pill">Basketball</li>
+      <li class="pill">Tennis</li>
+      <li class="pill">Athletics</li>
+    </ul>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="container reveal" id="about">
+    <h2>About Global Sport Link</h2>
+    <div class="card">
+      <p>
+        Global Sport Link (GSL) is a multi-sport performance analysis platform.
+        We use AI to turn short sports videos into clear, educational insight — from elite professionals to everyday athletes.
+      </p>
+      <p class="small">
+        Our mission is to make performance understanding accessible: learn the patterns, apply the insight, improve with clarity.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="container reveal" id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p class="small" style="margin:0">
+        For partnerships, media inquiries, or support:
+        <strong>contact@globalsportlink.com</strong>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>© <span id="year"></span> Global Sport Link (GSL)</p>
+  <p>Educational performance analysis only. Uploads must be authorized by the uploader.</p>
+</footer>
+
+<!-- ================= JS (INLINE) ================= -->
+<script>
+  // year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // mobile menu
+  (function(){
+    const btn = document.querySelector("[data-menu-btn]");
+    const panel = document.querySelector("[data-mobile-panel]");
+    if(btn && panel){
+      btn.addEventListener("click", ()=>{
+        const isOpen = panel.classList.toggle("open");
+        btn.setAttribute("aria-expanded", String(isOpen));
+      });
+      panel.querySelectorAll("a").forEach(a=>{
+        a.addEventListener("click", ()=>{
+          panel.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+  })();
+
+  // subtle reveal animations (IntersectionObserver)
+  (function(){
+    const els = document.querySelectorAll(".reveal");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reduce){
+      els.forEach(el=>el.classList.add("show"));
+      return;
+    }
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add("show");
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.12});
+    els.forEach(el=>io.observe(el));
+  })();
+</script>
+
+</body>
+</html>
