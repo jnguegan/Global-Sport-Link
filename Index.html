@@ -71,6 +71,16 @@
       padding:14px 0;
     }
 
+    /* LANGUAGE SELECTOR */
+.lang-select{
+  margin-left:14px;
+  padding:8px 10px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.12);
+  background:#020617;
+  color:#e5e7eb;
+  font-weight:700;
+}
     .brand{
   display:flex;
   align-items:center;
@@ -188,10 +198,16 @@
   <span class="brand-text">GLOBAL SPORT LINK</span>
 </a>
     <span>
-      <a href="#elite">Elite</a>
-      <a href="#submit">Submit</a>
-      <a href="#about">About</a>
-    </span>
+  <a href="#elite" data-i18n="nav_elite">Elite</a>
+  <a href="#submit" data-i18n="nav_submit">Submit</a>
+  <a href="#about" data-i18n="nav_about">About</a>
+
+  <select id="langSelect" class="lang-select" aria-label="Language">
+    <option value="en">EN</option>
+    <option value="fr">FR</option>
+    <option value="es">ES</option>
+  </select>
+</span>
   </div>
 </header>
 
@@ -292,9 +308,57 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  const translations = {
+    en: {
+      nav_elite: "Elite",
+      nav_submit: "Submit",
+      nav_about: "About",
+      hero_title: "AI-powered performance insight across sport",
+      hero_subtitle: "Global Sport Link (GSL) analyzes elite athletes and user-submitted videos to deliver clear, educational performance insight.",
+      btn_elite: "Elite Analysis",
+      btn_submit: "Submit Your Video"
+    },
+    fr: {
+      nav_elite: "Élite",
+      nav_submit: "Envoyer",
+      nav_about: "À propos",
+      hero_title: "Analyse de performance par IA, tous sports confondus",
+      hero_subtitle: "Global Sport Link (GSL) analyse des athlètes d’élite et des vidéos envoyées par les utilisateurs.",
+      btn_elite: "Analyse Élite",
+      btn_submit: "Envoyer votre vidéo"
+    },
+    es: {
+      nav_elite: "Élite",
+      nav_submit: "Enviar",
+      nav_about: "Acerca de",
+      hero_title: "Análisis de rendimiento con IA para múltiples deportes",
+      hero_subtitle: "Global Sport Link (GSL) analiza atletas profesionales y vídeos enviados por usuarios.",
+      btn_elite: "Análisis Élite",
+      btn_submit: "Enviar tu vídeo"
+    }
+  };
+
+  function applyLanguage(lang){
+    const dict = translations[lang] || translations.en;
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if(dict[key]) el.textContent = dict[key];
+    });
+    localStorage.setItem("gsl_lang", lang);
+  }
+
+  const langSelect = document.getElementById("langSelect");
+  const savedLang = localStorage.getItem("gsl_lang") || "en";
+  if(langSelect){
+    langSelect.value = savedLang;
+    langSelect.addEventListener("change", e => applyLanguage(e.target.value));
+  }
+  applyLanguage(savedLang);
 </script>
 
 </body>
 </html>
+
 
 
