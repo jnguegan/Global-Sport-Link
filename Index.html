@@ -256,39 +256,34 @@
       </div>
 
       <div class="card">
-        <form name="video-submission" method="POST" data-netlify="true" enctype="multipart/form-data">
-          <input type="hidden" name="form-name" value="video-submission">
+<form name="video-submission" method="POST" netlify>
+  <input type="hidden" name="form-name" value="video-submission">
 
-          <label>Name</label>
-          <input name="name" required>
+  <label>Name</label>
+  <input type="text" name="name" required>
 
-          <label>Email</label>
-          <input name="email" type="email" required>
+  <label>Email</label>
+  <input type="email" name="email" required>
 
-          <label>Sport</label>
-          <select name="sport" required>
-            <option value="">Select</option>
-            <option>Golf</option>
-            <option>Football</option>
-            <option>Basketball</option>
-            <option>Tennis</option>
-            <option>Athletics</option>
-          </select>
+  <label>Sport</label>
+  <select name="sport" required>
+    <option value="">Select</option>
+    <option>Golf</option>
+    <option>Football</option>
+    <option>Basketball</option>
+    <option>Tennis</option>
+    <option>Athletics</option>
+  </select>
 
-          <label>Video link (Google Drive / Dropbox / iCloud / WeTransfer)</label>
-<input name="video_link" type="url" placeholder="Paste the share link here" required>
+  <label>Video link (Google Drive / Dropbox / iCloud / WeTransfer)</label>
+  <input type="url" name="video_link" placeholder="Paste the share link here" required>
 
-<p class="small" style="margin:0;">
-  Important: set the link to “Anyone with the link can view”.
-</p>
+  <p class="small">
+    Important: set the link to “Anyone with the link can view”.
+  </p>
 
-          <label class="small">
-            <input type="checkbox" required>
-            I confirm I have permission to upload this video for educational analysis.
-          </label>
-
-          <button class="btn primary" type="submit">Submit</button>
-        </form>
+  <button type="submit" class="btn primary">Submit</button>
+</form>
       </div>
     </div>
   </section>
@@ -363,6 +358,7 @@
 
 </body>
 </html>
+
 
 
 
