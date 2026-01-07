@@ -275,8 +275,12 @@
             <option>Athletics</option>
           </select>
 
-          <label>Video</label>
-          <input type="file" name="video" accept="video/*" required>
+          <label>Video link (Google Drive / Dropbox / iCloud / WeTransfer)</label>
+<input name="video_link" type="url" placeholder="Paste the share link here" required>
+
+<p class="small" style="margin:0;">
+  Important: set the link to “Anyone with the link can view”.
+</p>
 
           <label class="small">
             <input type="checkbox" required>
@@ -359,6 +363,7 @@
 
 </body>
 </html>
+
 
 
 
